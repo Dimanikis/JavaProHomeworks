@@ -7,7 +7,6 @@ import java.nio.ByteBuffer;
 
 public class Serializer {
 
-
     public void serialization(Object obj) throws IOException, IllegalAccessException {
         FileOutputStream fos = new FileOutputStream("save.txt");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -31,6 +30,7 @@ public class Serializer {
         }
         oos.close();
     }
+
 
     public void deserialization(Object obj) throws IOException, IllegalAccessException {
         FileInputStream fis = new FileInputStream("save.txt");
