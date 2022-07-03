@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="L2LoginEE:war">
+    <output-path>$PROJECT_DIR$/Homework2/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>L2LoginEE</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="L2LoginEE-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="L2LoginEE:war exploded" />
+    </root>
+  </artifact>
+</component>
