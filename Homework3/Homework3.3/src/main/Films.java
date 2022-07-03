@@ -1,25 +1,26 @@
 package main;
 
-import java.io.Serializable;
-import java.util.Calendar;
-import java.util.Date;
+import java.io.*;
 
 public class Films implements Serializable {
     @Save
     public String name;
     public String genre;
+    public int cost;
     @Save
     private int rating;
+    @Save
     private String starring;
 
-    private Date rDate;
+    public Films() {
+    }
 
-    public Films(String name, String genre, int rating, String starring, Date rDate) {
+    public Films(String name, String genre,int cost ,int rating, String starring) {
         this.name = name;
         this.genre = genre;
+        this.cost = cost;
         this.rating = rating;
         this.starring = starring;
-        this.rDate = rDate;
     }
 
     @Override
@@ -27,9 +28,14 @@ public class Films implements Serializable {
         return "Films{" +
                 "name='" + name + '\'' +
                 ", genre='" + genre + '\'' +
+                ", cost=" + cost +
                 ", rating=" + rating +
                 ", starring='" + starring + '\'' +
-                ", rDate=" + rDate +
                 '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }
