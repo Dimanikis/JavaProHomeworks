@@ -31,7 +31,6 @@ public class Serializer {
         oos.close();
     }
 
-
     public void deserialization(Object obj) throws IOException, IllegalAccessException {
         FileInputStream fis = new FileInputStream("save.txt");
         ObjectInputStream ois = new ObjectInputStream(fis);
