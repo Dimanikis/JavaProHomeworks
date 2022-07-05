@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Homework4/ChatClientJava/ChatEEClient.iml" filepath="$PROJECT_DIR$/Homework4/ChatClientJava/ChatEEClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework3/Homework3.1/Homework3.1.iml" filepath="$PROJECT_DIR$/Homework3/Homework3.1/Homework3.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework3/Homework3.2/Homework3.2.iml" filepath="$PROJECT_DIR$/Homework3/Homework3.2/Homework3.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework3/Homework3.3/Homework3.3.iml" filepath="$PROJECT_DIR$/Homework3/Homework3.3/Homework3.3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaProHomeworks.iml" filepath="$PROJECT_DIR$/.idea/JavaProHomeworks.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework2/L2LoginEE.iml" filepath="$PROJECT_DIR$/Homework2/L2LoginEE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework4/ChatServerJava/Server.iml" filepath="$PROJECT_DIR$/Homework4/ChatServerJava/Server.iml" />
     </modules>
   </component>
 </project>
