@@ -3,12 +3,14 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Homework2" />
     <file type="web" url="file://$PROJECT_DIR$/Homework4/ChatServerJava" />
+    <file type="web" url="file://$PROJECT_DIR$/Homework4/Homework4ChatServer" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Homework2/pom.xml" />
         <option value="$PROJECT_DIR$/Homework4/ChatServerJava/pom.xml" />
+        <option value="$PROJECT_DIR$/Homework4/Homework4ChatServer/pom.xml" />
       </list>
     </option>
   </component>
