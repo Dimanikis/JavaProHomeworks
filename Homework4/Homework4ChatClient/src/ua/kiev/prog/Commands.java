@@ -28,6 +28,7 @@ public class Commands {
                     System.out.println("HTTP error occured: " + res);
                     return null;
                 }
+                System.out.println("Complete");
             }catch (Exception e){
                 System.out.println("use next template for file send(@f filepath filename)");
                 return null;
@@ -38,7 +39,7 @@ public class Commands {
             System.out.println("available command:" + "\n" +
                     "@user(@u) - prints the user's list" + "\n" +
                     "@whisper(@w) - for private messages. Use next template (@w username message)" + "\n" +
-                    "@file(@f) - for file send. Use next template (@f filename)" + "\n" +
+                    "@file(@f) - for file send. Use next template (@f filepath filename)" + "\n" +
                     "@help(@h) - prints command list" + "\n");
         } else
             System.out.println("Print @help or @h for command list");

@@ -16,7 +16,7 @@ public class Files {
         this.file = new File(filepath, filename);
     }
 
-     /*public int send(String url) throws IOException {
+     public int send(String url) throws IOException {
         URL obj = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 
@@ -31,8 +31,9 @@ public class Files {
             os.write(bytes);
             return conn.getResponseCode(); // 200?
         }
-    }*/
+    }
 
+    /*
     public int send(String url) throws IOException {
         URL obj = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
@@ -43,13 +44,13 @@ public class Files {
         conn.setRequestProperty("Content-Type", URLConnection.guessContentTypeFromName(file.getName()));
         conn.setDoOutput(true);
 
-
-        try (BufferedOutputStream os = new BufferedOutputStream(conn.getOutputStream()); InputStream fis = new FileInputStream(file)) {
-            byte[] dataBuffer = RespBody.responseBodyToArray(fis);
+        try (BufferedOutputStream os = new BufferedOutputStream(conn.getOutputStream()); InputStream is = new FileInputStream(file)) {
+            byte[] dataBuffer = RespBody.responseBodyToArray(is);
             os.write(dataBuffer);
             return conn.getResponseCode(); // 200?
         }
     }
+    /*
 
     /*public int sendFile(String url) throws IOException {
         URL obj = new URL(url);

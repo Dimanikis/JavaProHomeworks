@@ -22,6 +22,7 @@ public class Main {
 			oh.setDaemon(true);
 			oh.start();
 
+			System.out.println("Print @help or @h for command list");
             System.out.println("Enter your message: ");
 			while (true) {
 				Message m;
