@@ -12,10 +12,12 @@ public class GetListServlet extends HttpServlet {
     @Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		String fromStr = req.getParameter("from");
+		String username = req.getParameter("username");
 		int from = 0;
 		try {
 			from = Integer.parseInt(fromStr);
-			if (from < 0) from = 0;
+			if (from < 0)
+				from = 0;
 		} catch (Exception ex) {
 			resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
@@ -23,7 +25,7 @@ public class GetListServlet extends HttpServlet {
 
 		resp.setContentType("application/json");
 		
-		String json = msgList.toJSON(from);
+		String json = msgList.toJSON(from, username);
 		if (json != null) {
 			OutputStream os = resp.getOutputStream();
             byte[] buf = json.getBytes(StandardCharsets.UTF_8);

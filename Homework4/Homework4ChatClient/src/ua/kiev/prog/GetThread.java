@@ -28,7 +28,7 @@ public class GetThread implements Runnable {
     public void run() {
         try {
             while ( ! Thread.interrupted()) {
-                URL url = new URL(Utils.getURL() + "/get?from=" + n);
+                URL url = new URL(Utils.getURL() + "/get?from=" + n + "&username=" + user.getUsername());
                 HttpURLConnection http = (HttpURLConnection) url.openConnection();
 
                 InputStream is = http.getInputStream();
@@ -39,7 +39,7 @@ public class GetThread implements Runnable {
                     JsonMessages list = gson.fromJson(strBuf, JsonMessages.class);
                     if (list != null) {
                         for (Message m : list.getList()) {
-                            if(m.getTo() == null || m.getTo().equals(user.getUsername()) || m.getFrom().equals(user.getUsername())){
+                            if(m != null){
                                 System.out.println(m);
                             }
                             n++;
