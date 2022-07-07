@@ -35,20 +35,6 @@ public class User {
                 '}';
     }
 
-    public int send(String url) throws IOException {
-        URL obj = new URL(url);
-        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
-
-        conn.setRequestMethod("POST");
-        conn.setDoOutput(true);
-
-        try (OutputStream os = conn.getOutputStream()) {
-            String json = toJSON();
-            os.write(json.getBytes(StandardCharsets.UTF_8));
-            return conn.getResponseCode(); // 200?
-        }
-    }
-
     public String getUsername() {
         return username;
     }

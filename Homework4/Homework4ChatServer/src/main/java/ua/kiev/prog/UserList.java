@@ -51,7 +51,7 @@ public class UserList {
                             user.setStatus(false);
                        }
                    }
-       },10000);
+       },500);
     }
 
     public synchronized String toJSON(int n) {

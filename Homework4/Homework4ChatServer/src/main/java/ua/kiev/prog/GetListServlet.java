@@ -8,6 +8,7 @@ import jakarta.servlet.http.*;
 public class GetListServlet extends HttpServlet {
 	
 	private MessageList msgList = MessageList.getInstance();
+	private UserList usrList = UserList.getInstance();
 
     @Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -20,9 +21,14 @@ public class GetListServlet extends HttpServlet {
 				from = 0;
 		} catch (Exception ex) {
 			resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            return;
+			return;
 		}
 
+		if (username == null){
+			resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+	}
+		addUser(username);
 		resp.setContentType("application/json");
 		
 		String json = msgList.toJSON(from, username);
@@ -32,5 +38,13 @@ public class GetListServlet extends HttpServlet {
 			os.write(buf);
 
 		}
+	}
+	private void addUser(String username){
+
+		User usr = new User(username);
+		if (usrList.contain(usr)) {
+			usrList.online(usr);
+		} else
+			usrList.add(usr);
 	}
 }

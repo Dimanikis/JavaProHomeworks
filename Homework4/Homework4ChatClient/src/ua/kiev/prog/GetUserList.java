@@ -30,7 +30,6 @@ public class GetUserList {
         if (list != null) {
             for (User u : list.getList()) {
                 System.out.println(u);
-                n++;
             }
         }
     }
