@@ -50,7 +50,7 @@ public class Commands {
             }
             System.out.println("Complete");
             } catch (Exception e){
-                System.out.println("use next template for file send(@fd Download_Path FileName)");
+                System.out.println("use next template for file download(@fd download_path filename)");
                 return null;
             }
             return null;
@@ -62,6 +62,7 @@ public class Commands {
                     @whisper(@w) - for private messages. Use next template (@w username message)
                     @fileSend(@fs) - for file send. Use next template (@fs filepath filename)
                     @fileList(@fl) - prints a list of files on the server
+                    @fileDownload(@fd) - for download file from server. Use next template(@fd download_path filename)
                     @help(@h) - prints command list
                     """);
         } else
