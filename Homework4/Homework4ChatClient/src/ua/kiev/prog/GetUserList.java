@@ -3,7 +3,6 @@ package ua.kiev.prog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -12,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 
 public class GetUserList {
     private final Gson gson;
-    private int n;
 
     public GetUserList(){
         gson = new GsonBuilder().create();

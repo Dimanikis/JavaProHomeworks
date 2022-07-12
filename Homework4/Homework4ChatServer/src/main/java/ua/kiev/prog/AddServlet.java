@@ -10,7 +10,7 @@ public class AddServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		byte[] buf = RequestBody.requestBodyToArray(req);
+		byte[] buf = RequestBody.requestBodyToArray(req.getInputStream());
         String bufStr = new String(buf, StandardCharsets.UTF_8);
 
 		Message msg = Message.fromJSON(bufStr);

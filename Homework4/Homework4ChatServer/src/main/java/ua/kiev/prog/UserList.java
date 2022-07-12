@@ -54,9 +54,7 @@ public class UserList {
        },500);
     }
 
-    public synchronized String toJSON(int n) {
-        if (n >= list.size())
-            return null;
-        return gson.toJson(new JsonUser(list, n));
+    public synchronized String toJSON() {
+        return gson.toJson(new JsonUser(list));
     }
 }

@@ -8,8 +8,7 @@ import java.io.InputStream;
 
 public class RequestBody {
 
-    public static byte[] requestBodyToArray(HttpServletRequest req) throws IOException {
-        InputStream is = req.getInputStream();
+    public static byte[] requestBodyToArray(InputStream is) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         byte[] buf = new byte[10240];
         int r;

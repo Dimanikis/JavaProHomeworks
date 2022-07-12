@@ -1,8 +1,5 @@
 package ua.kiev.prog;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -16,59 +13,54 @@ public class Files {
         this.file = new File(filepath, filename);
     }
 
+    public Files(){
+    }
+
      public int send(String url) throws IOException {
         URL obj = new URL(url);
-        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
+        HttpURLConnection http = (HttpURLConnection) obj.openConnection();
 
-        conn.setRequestMethod("POST");
-        conn.setRequestProperty("Connection", "Keep-Alive");
-        conn.setRequestProperty("Cache-Control", "no-cache");
-        conn.setRequestProperty("Content-Type", URLConnection.guessContentTypeFromName(file.getName()));
-        conn.setDoOutput(true);
+        http.setRequestMethod("PUT");
+        http.setRequestProperty("Connection", "Keep-Alive");
+        http.setRequestProperty("Cache-Control", "no-cache");
+        http.setRequestProperty("Content-Type", URLConnection.guessContentTypeFromName(file.getName()));
+        http.setDoOutput(true);
 
-        try (OutputStream os = conn.getOutputStream(); InputStream is = new FileInputStream(file)) {
+        try (OutputStream os = http.getOutputStream(); InputStream is = new FileInputStream(file)) {
             byte[] bytes = RespBody.responseBodyToArray(is);
             os.write(bytes);
-            return conn.getResponseCode(); // 200?
+            return http.getResponseCode(); // 200?
         }
     }
-
-    /*
-    public int send(String url) throws IOException {
+    public int download(String url) throws IOException {
         URL obj = new URL(url);
-        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
+        HttpURLConnection http = (HttpURLConnection) obj.openConnection();
 
-        conn.setRequestMethod("POST");
-        conn.setRequestProperty("Connection", "Keep-Alive");
-        conn.setRequestProperty("Cache-Control", "no-cache");
-        conn.setRequestProperty("Content-Type", URLConnection.guessContentTypeFromName(file.getName()));
-        conn.setDoOutput(true);
+        http.setRequestProperty("Connection", "Keep-Alive");
+        http.setRequestProperty("Cache-Control", "no-cache");
+        http.setRequestProperty("Content-Type", URLConnection.guessContentTypeFromName(file.getName()));
+        System.out.println(this.file.getAbsolutePath());
 
-        try (BufferedOutputStream os = new BufferedOutputStream(conn.getOutputStream()); InputStream is = new FileInputStream(file)) {
-            byte[] dataBuffer = RespBody.responseBodyToArray(is);
-            os.write(dataBuffer);
-            return conn.getResponseCode(); // 200?
-        }
-    }
-    /*
-
-    /*public int sendFile(String url) throws IOException {
-        URL obj = new URL(url);
-        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
-
-        conn.setRequestMethod("POST");
-        conn.setDoOutput(true);
-
-        try (BufferedInputStream in = new BufferedInputStream(conn.getInputStream());
-             FileOutputStream fileOutputStream = new FileOutputStream(filename)) {
-            byte[] dataBuffer = new byte[1024];
-            int bytesRead;
-            while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
-                fileOutputStream.write(dataBuffer, 0, bytesRead);
+        try (BufferedInputStream inputStream = new BufferedInputStream(http.getInputStream());
+             FileOutputStream fileOS = new FileOutputStream(this.file)) {
+            byte[] data = new byte[1024];
+            int byteContent;
+            while ((byteContent = inputStream.read(data, 0, 1024)) != -1) {
+                fileOS.write(data, 0, byteContent);
             }
-            return conn.getResponseCode(); // 200?
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }*/
+        return http.getResponseCode();
+    }
+    public String GetList() throws IOException {
+        URL obj = new URL(Utils.getURL() + "/File?list=true");
+        HttpURLConnection http = (HttpURLConnection) obj.openConnection();
+
+        InputStream is = http.getInputStream();
+        byte[] buf = RespBody.responseBodyToArray(is);
+        return new String(buf, StandardCharsets.UTF_8);
+    }
 
     public File getFile() {
         return file;
