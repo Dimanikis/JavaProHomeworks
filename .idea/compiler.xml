@@ -8,9 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Server" />
         <module name="L2LoginEE" />
+        <module name="jdbc-dao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jdbc-dao" target="1.8" />
       <module name="L2LoginEE" target="1.8" />
       <module name="Server" target="1.8" />
     </bytecodeTargetLevel>
