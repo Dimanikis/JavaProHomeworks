@@ -6,6 +6,7 @@ import ua.kiev.prog.shared.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -25,9 +26,13 @@ public class Main {
             ClientDAOImpl2 dao = new ClientDAOImpl2(conn, "Clients");
             dao.createTable(Client.class);
 
-            Client c = new Client("test", 1);
-            dao.add(c);
-            // int id = c.getId();
+            for(int i = 1; i < 11; i++){
+                Client c = new Client("test" + i, i);
+                dao.add(c);
+                int id = c.getId();
+                System.out.println(id);
+
+            }
 
             List<Client> list = dao.getAll(Client.class);
             for (Client cli : list)
@@ -36,14 +41,24 @@ public class Main {
             list.get(0).setAge(55);
             dao.update(list.get(0));
 
-            /*
 
-            List<Client> list = dao.getAll(Client.class, "name", "age");
-            List<Client> list = dao.getAll(Client.class, "age");
+            System.out.println("//////////////////////////");
+            String[] column = {"name","age"};
+            list = dao.getAll(Client.class, column);
+            for (Client cli : list)
+                System.out.println(cli);
+            System.out.println("//////////////////////////");
+            column = new String[]{"name"};
+            list = dao.getAll(Client.class, column);
+            for (Client cli : list)
+                System.out.println(cli);
+            System.out.println("//////////////////////////");
+            column = new String[]{"age"};
+            list = dao.getAll(Client.class, column);
             for (Client cli : list)
                 System.out.println(cli);
 
-             */
+
 
             dao.delete(list.get(0));
         }

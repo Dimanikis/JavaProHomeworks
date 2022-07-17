@@ -42,9 +42,9 @@ public class Client {
     @Override
     public String toString() {
         return "Client{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
+                (id ==0?"":("id=" + id + ", ")) +
+                (name==null?"":("name='" + name + '\'' + ", " ))+
+                (age==0?"":("age=" + age)) +
                 '}';
     }
 }

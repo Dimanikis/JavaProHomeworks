@@ -5,6 +5,7 @@ import ua.kiev.prog.shared.Id;
 import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class AbstractDAO<T> {
@@ -82,7 +83,13 @@ public abstract class AbstractDAO<T> {
                     ") VALUES(" + values.toString() + ")";
 
             try (Statement st = conn.createStatement()) {
-                st.execute(sql);
+                st.execute(sql, Statement.RETURN_GENERATED_KEYS);
+                ResultSet rs = st.getGeneratedKeys();
+                int key = 0;
+                if (rs != null && rs.next()) {
+                    key = rs.getInt(1);
+                }
+                id.set(t,key);
             }
 
             // TODO: get ID
@@ -160,6 +167,46 @@ public abstract class AbstractDAO<T> {
                             field.setAccessible(true);
 
                             field.set(t, rs.getObject(columnName));
+                        }
+
+                        res.add(t);
+                    }
+                }
+            }
+
+            return res;
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    public List<T> getAll(Class<T> cls,String[] column) {
+        List<T> res = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
+        for (String s : column) {
+            sb.append(s);
+            sb.append(",");
+        }
+        sb.deleteCharAt(sb.length() - 1);
+
+        try {
+            try (Statement st = conn.createStatement()) {
+                try (ResultSet rs = st.executeQuery("SELECT " + sb + " FROM " + table)) {
+                    ResultSetMetaData md = rs.getMetaData();
+
+                    while (rs.next()) {
+                        T t = cls.newInstance(); //!!!
+
+                        for (int i = 1; i <= md.getColumnCount(); i++) {
+                            String columnName = md.getColumnName(i);
+                            for (String s : column) {
+                                if(s.equals(columnName)){
+                                    Field field = cls.getDeclaredField(columnName);
+                                    field.setAccessible(true);
+
+                                    field.set(t, rs.getObject(columnName));
+                                }
+                            }
                         }
 
                         res.add(t);
