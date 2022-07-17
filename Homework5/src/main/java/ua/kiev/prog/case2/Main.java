@@ -42,17 +42,19 @@ public class Main {
             dao.update(list.get(0));
 
 
-            System.out.println("//////////////////////////");
+            System.out.println("Client column name and age");
             String[] column = {"name","age"};
             list = dao.getAll(Client.class, column);
             for (Client cli : list)
                 System.out.println(cli);
-            System.out.println("//////////////////////////");
+
+            System.out.println("Client column name");
             column = new String[]{"name"};
             list = dao.getAll(Client.class, column);
             for (Client cli : list)
                 System.out.println(cli);
-            System.out.println("//////////////////////////");
+
+            System.out.println("Client column age");
             column = new String[]{"age"};
             list = dao.getAll(Client.class, column);
             for (Client cli : list)
