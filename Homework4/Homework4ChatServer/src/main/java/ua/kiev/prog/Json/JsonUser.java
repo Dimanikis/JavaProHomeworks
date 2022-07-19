@@ -1,4 +1,6 @@
-package ua.kiev.prog;
+package ua.kiev.prog.Json;
+
+import ua.kiev.prog.shared.User;
 
 import java.util.ArrayList;
 import java.util.List;

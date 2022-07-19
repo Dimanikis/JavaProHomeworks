@@ -2,6 +2,8 @@ package ua.kiev.prog;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import ua.kiev.prog.Json.JsonUser;
+import ua.kiev.prog.shared.User;
 
 import java.util.LinkedList;
 import java.util.List;

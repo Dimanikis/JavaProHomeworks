@@ -1,9 +1,12 @@
-package ua.kiev.prog;
+package ua.kiev.prog.Servlet;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import jakarta.servlet.http.*;
+import ua.kiev.prog.MessageList;
+import ua.kiev.prog.shared.User;
+import ua.kiev.prog.UserList;
 
 public class GetListServlet extends HttpServlet {
 	

@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import ua.kiev.prog.Json.JsonMessages;
+import ua.kiev.prog.shared.Message;
 
 public class MessageList {
 	private static final MessageList msgList = new MessageList();

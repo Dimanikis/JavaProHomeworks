@@ -1,8 +1,9 @@
-package ua.kiev.prog;
+package ua.kiev.prog.Servlet;
 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import ua.kiev.prog.RequestBody;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -51,7 +52,7 @@ public class FileServlet extends HttpServlet {
             String fileName = req.getParameter("fileName");
             if(fileName != null) {
                 File file = new File(fd.getAbsolutePath(), fileName);
-                try (OutputStream os = resp.getOutputStream(); InputStream is = new FileInputStream(file)){
+                try (OutputStream os = resp.getOutputStream(); InputStream is = Files.newInputStream(file.toPath())){
                     byte[] buf = RequestBody.requestBodyToArray(is);
                     os.write(buf);
                 }

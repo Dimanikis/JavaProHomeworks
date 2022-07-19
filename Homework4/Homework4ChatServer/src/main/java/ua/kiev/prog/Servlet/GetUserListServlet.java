@@ -1,8 +1,9 @@
-package ua.kiev.prog;
+package ua.kiev.prog.Servlet;
 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import ua.kiev.prog.UserList;
 
 import java.io.IOException;
 import java.io.OutputStream;
