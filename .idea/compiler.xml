@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jpasample" />
         <module name="Server" />
         <module name="L2LoginEE" />
         <module name="jdbc-dao" />
@@ -13,6 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jdbc-dao" target="1.8" />
+      <module name="jpasample" target="1.8" />
       <module name="L2LoginEE" target="1.8" />
       <module name="Server" target="1.8" />
     </bytecodeTargetLevel>

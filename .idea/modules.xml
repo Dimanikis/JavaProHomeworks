@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Homework2/L2LoginEE.iml" filepath="$PROJECT_DIR$/Homework2/L2LoginEE.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework4/Homework4ChatServer/Server.iml" filepath="$PROJECT_DIR$/Homework4/Homework4ChatServer/Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework5/jdbc-dao.iml" filepath="$PROJECT_DIR$/Homework5/jdbc-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework6/jpasample.iml" filepath="$PROJECT_DIR$/Homework6/jpasample.iml" />
     </modules>
   </component>
 </project>
