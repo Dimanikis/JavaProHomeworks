@@ -21,7 +21,8 @@ public class App {
                     System.out.println("2: add random apart");
                     System.out.println("3: delete apart");
                     System.out.println("4: change apart");
-                    System.out.println("5: view apart");
+                    System.out.println("5: view all apart");
+                    System.out.println("6: filter search apart");
                     System.out.print("-> ");
 
                     String s = sc.nextLine();
@@ -39,7 +40,10 @@ public class App {
                             changeApart(sc);
                             break;
                         case "5":
-                            viewApart();
+                            viewAllApart();
+                            break;
+                        case "6":
+                            filterSearchApart(sc);
                             break;
                         default:
                             return;
@@ -168,13 +172,77 @@ public class App {
         }
     }
 
-    private static void viewApart() {
+    private static void viewAllApart() {
         Query query = em.createQuery(
                 "SELECT a FROM Apartments a", Apartments.class);
         List<Apartments> list = (List<Apartments>) query.getResultList();
 
         for (Apartments a : list)
             System.out.println(a);
+    }
+
+    private static void filterSearchApart(Scanner sc){
+        StringBuilder sb = new StringBuilder();
+        sb.append("select a FROM Apartments a Where ");
+        int i = 0;
+        while (i == 0){
+            System.out.println("Enter number to choose filter or empty to finish");
+            System.out.println("1: add filter by area");
+            System.out.println("2: add filter by number of rooms");
+            System.out.println("3: add filter by price");
+            System.out.print("-> ");
+            String s = sc.nextLine();
+            switch (s) {
+                case "1":
+                    sb.append("a.").append("area ").append(filterType(sc)).append(" AND ");
+                    break;
+                case "2":
+                    sb.append("a.").append("nor ").append(filterType(sc)).append(" AND ");
+                    break;
+                case "3":
+                    sb.append("a.").append("price ").append(filterType(sc)).append(" AND ");
+                    break;
+                default:
+                    i = 1;
+                    break;
+            }
+        }
+        sb.delete(sb.length() - 5,sb.length() - 1);
+
+        Query query = em.createQuery(sb.toString(), Apartments.class);
+        List<Apartments> list = (List<Apartments>) query.getResultList();
+
+        for(Apartments a : list)
+            System.out.println(a);
+    }
+
+    public static String filterType(Scanner sc){
+        System.out.println("Enter number to choose variant filter");
+        System.out.println("1: equals");
+        System.out.println("2: less then");
+        System.out.println("3: more then");
+        System.out.println("4: between");
+        System.out.print("-> ");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder();
+        switch (s) {
+            case "1":
+                System.out.println("Enter value");
+                return sb.append("= ").append(sc.nextLine()).toString();
+            case "2":
+                System.out.println("Enter value");
+                return sb.append("< ").append(sc.nextLine()).toString();
+            case "3":
+                System.out.println("Enter value");
+                return sb.append("> ").append(sc.nextLine()).toString();
+            case "4":
+                System.out.println("Enter minimal value");
+                sb.append("BETWEEN ").append(sc.nextLine());
+                System.out.println("Enter maximal value");
+                return sb.append(" AND ").append(sc.nextLine()).toString();
+            default:
+                return s;
+        }
     }
 
     static final String[] Region = {"Голосiївський", "Дарницький", "Деснянський", "Днiпровський", "Оболонський","Печерський","Подiльський","Святошинський","Солом'янський","Шевченківський"};
