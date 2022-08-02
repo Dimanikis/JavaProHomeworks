@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jpasample" />
         <module name="Server" />
+        <module name="Homework7" />
         <module name="L2LoginEE" />
         <module name="jdbc-dao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Homework7" target="1.8" />
       <module name="jdbc-dao" target="1.8" />
       <module name="jpasample" target="1.8" />
       <module name="L2LoginEE" target="1.8" />
