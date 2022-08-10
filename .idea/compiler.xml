@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jpasample" />
+        <module name="Homework8" />
         <module name="Server" />
         <module name="Homework7" />
         <module name="L2LoginEE" />
@@ -15,6 +16,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Homework7" target="1.8" />
+      <module name="Homework7 (1)" target="1.8" />
+      <module name="Homework8" target="1.8" />
       <module name="jdbc-dao" target="1.8" />
       <module name="jpasample" target="1.8" />
       <module name="L2LoginEE" target="1.8" />
