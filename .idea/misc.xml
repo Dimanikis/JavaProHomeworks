@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Homework10" />
     <file type="web" url="file://$PROJECT_DIR$/Homework2" />
     <file type="web" url="file://$PROJECT_DIR$/Homework4/ChatServerJava" />
     <file type="web" url="file://$PROJECT_DIR$/Homework4/Homework4ChatServer" />
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/Homework7/pom.xml" />
         <option value="$PROJECT_DIR$/Homework8/pom.xml" />
         <option value="$PROJECT_DIR$/Homework9/pom.xml" />
+        <option value="$PROJECT_DIR$/Homework10/pom.xml" />
       </list>
     </option>
   </component>
