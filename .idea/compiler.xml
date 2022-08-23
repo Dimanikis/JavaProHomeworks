@@ -14,8 +14,8 @@
         <module name="Homework5" />
         <module name="Homework9" />
         <module name="Homework8" />
-        <module name="Homework11" />
         <module name="Homework4ChatServer" />
+        <module name="Homework11" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
