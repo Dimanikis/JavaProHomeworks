@@ -7,31 +7,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Server" />
+        <module name="Homework2" />
         <module name="Homework7" />
         <module name="Homework10" />
-        <module name="jpasample" />
+        <module name="Homework6" />
+        <module name="Homework5" />
         <module name="Homework9" />
         <module name="Homework8" />
-        <module name="L2LoginEE" />
-        <module name="jdbc-dao" />
+        <module name="Homework11" />
+        <module name="Homework4ChatServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Homework10" target="1.8" />
+      <module name="Homework11" target="13" />
+      <module name="Homework2" target="1.8" />
+      <module name="Homework4ChatServer" target="1.8" />
+      <module name="Homework5" target="1.8" />
+      <module name="Homework6" target="1.8" />
       <module name="Homework7" target="1.8" />
       <module name="Homework7 (1)" target="1.8" />
       <module name="Homework8" target="1.8" />
       <module name="Homework9" target="13" />
-      <module name="jdbc-dao" target="1.8" />
-      <module name="jpasample" target="1.8" />
-      <module name="L2LoginEE" target="1.8" />
-      <module name="Server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Homework10" options="-parameters" />
+      <module name="Homework11" options="-parameters" />
       <module name="Homework3.1" options="--add-modules java.base" />
       <module name="Homework9" options="-parameters" />
     </option>
