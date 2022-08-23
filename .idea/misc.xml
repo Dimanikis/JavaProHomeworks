@@ -9,16 +9,16 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Homework2/pom.xml" />
         <option value="$PROJECT_DIR$/Homework4/ChatServerJava/pom.xml" />
-        <option value="$PROJECT_DIR$/Homework4/Homework4ChatServer/pom.xml" />
-        <option value="$PROJECT_DIR$/Homework5/pom.xml" />
-        <option value="$PROJECT_DIR$/Homework6/pom.xml" />
         <option value="$PROJECT_DIR$/Homework7/pom.xml" />
         <option value="$PROJECT_DIR$/Homework8/pom.xml" />
         <option value="$PROJECT_DIR$/Homework9/pom.xml" />
         <option value="$PROJECT_DIR$/Homework10/pom.xml" />
         <option value="$PROJECT_DIR$/Homework11/pom.xml" />
+        <option value="$PROJECT_DIR$/Homework6/pom.xml" />
+        <option value="$PROJECT_DIR$/Homework2/pom.xml" />
+        <option value="$PROJECT_DIR$/Homework4/Homework4ChatServer/pom.xml" />
+        <option value="$PROJECT_DIR$/Homework5/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
