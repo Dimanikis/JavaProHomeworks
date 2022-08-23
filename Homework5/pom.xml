@@ -7,7 +7,7 @@
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>JdbcDao</name>
+  <name>Homework5</name>
   <url>http://maven.apache.org</url>
 
   <properties>

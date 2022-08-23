@@ -7,7 +7,7 @@
     <groupId>academy.prog</groupId>
     <artifactId>L2LoginEE</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>L2 - LoginEE</name>
+    <name>Homework2</name>
     <packaging>war</packaging>
 
     <properties>
