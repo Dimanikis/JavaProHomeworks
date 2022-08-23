@@ -3,18 +3,19 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Homework10/Homework10.iml" filepath="$PROJECT_DIR$/Homework10/Homework10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework11/Homework11.iml" filepath="$PROJECT_DIR$/Homework11/Homework11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework2/Homework2.iml" filepath="$PROJECT_DIR$/Homework2/Homework2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework3/Homework3.1/Homework3.1.iml" filepath="$PROJECT_DIR$/Homework3/Homework3.1/Homework3.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework3/Homework3.2/Homework3.2.iml" filepath="$PROJECT_DIR$/Homework3/Homework3.2/Homework3.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework3/Homework3.3/Homework3.3.iml" filepath="$PROJECT_DIR$/Homework3/Homework3.3/Homework3.3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework4/Homework4ChatClient/Homework4ChatClient.iml" filepath="$PROJECT_DIR$/Homework4/Homework4ChatClient/Homework4ChatClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework4/Homework4ChatServer/Homework4ChatServer.iml" filepath="$PROJECT_DIR$/Homework4/Homework4ChatServer/Homework4ChatServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework5/Homework5.iml" filepath="$PROJECT_DIR$/Homework5/Homework5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework6/Homework6.iml" filepath="$PROJECT_DIR$/Homework6/Homework6.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework7/Homework7.iml" filepath="$PROJECT_DIR$/Homework7/Homework7.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework8/Homework8.iml" filepath="$PROJECT_DIR$/Homework8/Homework8.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework9/Homework9.iml" filepath="$PROJECT_DIR$/Homework9/Homework9.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaProHomeworks.iml" filepath="$PROJECT_DIR$/.idea/JavaProHomeworks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Homework2/L2LoginEE.iml" filepath="$PROJECT_DIR$/Homework2/L2LoginEE.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Homework4/Homework4ChatServer/Server.iml" filepath="$PROJECT_DIR$/Homework4/Homework4ChatServer/Server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Homework5/jdbc-dao.iml" filepath="$PROJECT_DIR$/Homework5/jdbc-dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Homework6/jpasample.iml" filepath="$PROJECT_DIR$/Homework6/jpasample.iml" />
     </modules>
   </component>
 </project>
