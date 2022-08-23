@@ -37,7 +37,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //.antMatchers("/admin") //@PreAuthorize
                 //    .hasRole("ADMIN")
                 .antMatchers("/register")
-                    .permitAll()
+                    .not()
+                    .hasAnyRole("USER","MODERATOR")
                 .and()
         .exceptionHandling()
                 .accessDeniedPage("/unauthorized")
