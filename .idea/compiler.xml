@@ -10,6 +10,7 @@
         <module name="Homework2" />
         <module name="Homework7" />
         <module name="Homework10" />
+        <module name="login-via-google" />
         <module name="Homework6" />
         <module name="Homework5" />
         <module name="Homework9" />
@@ -29,6 +30,7 @@
       <module name="Homework7 (1)" target="1.8" />
       <module name="Homework8" target="1.8" />
       <module name="Homework9" target="13" />
+      <module name="login-via-google" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -37,6 +39,7 @@
       <module name="Homework11" options="-parameters" />
       <module name="Homework3.1" options="--add-modules java.base" />
       <module name="Homework9" options="-parameters" />
+      <module name="login-via-google" options="-parameters" />
     </option>
   </component>
 </project>
